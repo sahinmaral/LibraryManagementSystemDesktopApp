@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03B08800-6E45-4841-815C-EBDDE28CCE30}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagementSystem</RootNamespace>
+    <AssemblyName>LibraryManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\EventArgs\SearchBookByIsbnNoEventArgs.cs" />
+    <Compile Include="Models\EventArgs\SearchBookByNameEventArgs.cs" />
+    <Compile Include="Models\EventArgs\SearchBookByWriterNameSurnameEventArgs.cs" />
+    <Compile Include="Models\EventArgs\SearchPersonByNameEventArgs.cs" />
+    <Compile Include="Models\EventArgs\SearchPersonByTakenBookEventArgs.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\EventArgs\SearchPersonByTurkishIdEventArgs.cs" />
+    <Compile Include="Properties\ConnectionClass.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BookQuery\BookQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BookQuery\BookQuery.Designer.cs">
+      <DependentUpon>BookQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BookQuery\SearchBookByIsbnNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BookQuery\SearchBookByIsbnNo.Designer.cs">
+      <DependentUpon>SearchBookByIsbnNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BookQuery\SearchBookByWriterNameSurname.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BookQuery\SearchBookByWriterNameSurname.Designer.cs">
+      <DependentUpon>SearchBookByWriterNameSurname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BookQuery\SearchBookByName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BookQuery\SearchBookByName.Designer.cs">
+      <DependentUpon>SearchBookByName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreateAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CreateAdmin.Designer.cs">
+      <DependentUpon>CreateAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Homepage.Designer.cs">
+      <DependentUpon>Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PersonQuery\PersonQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PersonQuery\PersonQuery.Designer.cs">
+      <DependentUpon>PersonQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PersonQuery\SearchPersonByTakenBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PersonQuery\SearchPersonByTakenBook.Designer.cs">
+      <DependentUpon>SearchPersonByTakenBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PersonQuery\SearchPersonByTurkishId.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PersonQuery\SearchPersonByTurkishId.Designer.cs">
+      <DependentUpon>SearchPersonByTurkishId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PersonQuery\SearchPersonByNameSurname.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PersonQuery\SearchPersonByNameSurname.Designer.cs">
+      <DependentUpon>SearchPersonByNameSurname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\OverdueBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\OverdueBooks.Designer.cs">
+      <DependentUpon>OverdueBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\MostBorrowedBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\MostBorrowedBooks.Designer.cs">
+      <DependentUpon>MostBorrowedBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reports\DashboardStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reports\DashboardStatistics.Designer.cs">
+      <DependentUpon>DashboardStatistics.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BookQuery\BookQuery.resx">
+      <DependentUpon>BookQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BookQuery\SearchBookByIsbnNo.resx">
+      <DependentUpon>SearchBookByIsbnNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BookQuery\SearchBookByWriterNameSurname.resx">
+      <DependentUpon>SearchBookByWriterNameSurname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BookQuery\SearchBookByName.resx">
+      <DependentUpon>SearchBookByName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CreateAdmin.resx">
+      <DependentUpon>CreateAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PersonQuery\PersonQuery.resx">
+      <DependentUpon>PersonQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PersonQuery\SearchPersonByTakenBook.resx">
+      <DependentUpon>SearchPersonByTakenBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PersonQuery\SearchPersonByTurkishId.resx">
+      <DependentUpon>SearchPersonByTurkishId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PersonQuery\SearchPersonByNameSurname.resx">
+      <DependentUpon>SearchPersonByNameSurname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\OverdueBooks.resx">
+      <DependentUpon>OverdueBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\MostBorrowedBooks.resx">
+      <DependentUpon>MostBorrowedBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reports\DashboardStatistics.resx">
+      <DependentUpon>DashboardStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PicturesIcons\library.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

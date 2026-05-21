@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\sahin\\Desktop\\Kutuphane_Sistemi-master\\Kutuphane_Sistemi-master\\Kutuphane_Sistemi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03B08800-6E45-4841-815C-EBDDE28CCE30}|Kutuphane_Sistemi\\Kutuphane_Sistemi.csproj|c:\\users\\sahin\\desktop\\kutuphane_sistemi-master\\kutuphane_sistemi-master\\kutuphane_sistemi\\kutuphane_sistemi\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03B08800-6E45-4841-815C-EBDDE28CCE30}|Kutuphane_Sistemi\\Kutuphane_Sistemi.csproj|solutionrelative:kutuphane_sistemi\\ui\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\sahin\\Desktop\\Kutuphane_Sistemi-master\\Kutuphane_Sistemi-master\\Kutuphane_Sistemi\\Kutuphane_Sistemi\\UI\\Login.cs",
+              "RelativeDocumentMoniker": "Kutuphane_Sistemi\\UI\\Login.cs",
+              "ToolTip": "C:\\Users\\sahin\\Desktop\\Kutuphane_Sistemi-master\\Kutuphane_Sistemi-master\\Kutuphane_Sistemi\\Kutuphane_Sistemi\\UI\\Login.cs",
+              "RelativeToolTip": "Kutuphane_Sistemi\\UI\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T06:40:13.036Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
